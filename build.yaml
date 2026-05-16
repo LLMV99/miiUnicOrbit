@@ -20,8 +20,8 @@
 ---
 include:
 
-  - board: nice_nano_v2
-    shield: orbit_left nice_view
+#  - board: nice_nano_v2
+#    shield: orbit_left nice_view
 
 ## To build with ZMK Studio support, uncomment the following block
 ## by removing the leading '#' from each line.
@@ -38,16 +38,16 @@ include:
 #  - board: nice_nano_v2
 #    shield: orbit_dongle
 
-#  - board: nice_nano_v2
-#    shield: orbit_left nice_view
-#    snippet: orbit-left-as-peripheral
-#    artifact-name: orbit_left_as_peripheral
+  - board: nice_nano_v2
+    shield: orbit_left nice_view
+    snippet: orbit-left-as-peripheral
+    artifact-name: orbit_left_as_peripheral
 
-#  - board: nice_nano_v2
-#    shield: orbit_dongle
-#    snippet: studio-rpc-usb-uart
-#    cmake-args: -DCONFIG_ZMK_STUDIO=y
-#    artifact-name: orbit_dongle_with_studio
+  - board: nice_nano_v2
+    shield: orbit_dongle
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: orbit_dongle_with_studio
 
   - board: nice_nano_v2
     shield: orbit_right nice_view
