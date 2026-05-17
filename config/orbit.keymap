@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     keymap {
@@ -8,10 +9,10 @@
         Default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB           &kp Q  &kp W         &kp E         &kp R    &kp T                   &kp Y       &kp U          &kp I      &kp O    &kp P     &kp ESCAPE
-&kp LSHFT         &kp A  &lt 3 S       &lt 2 D       &lt 1 F  &kp G                   &kp H       &kp J          &kp K      &kp L    &kp SEMI  &kp RSHFT
-&kp LEFT_CONTROL  &kp Z  &kp X         &kp C         &kp V    &kp B                   &kp N       &kp M          &kp COMMA  &kp DOT  &kp APOS  &kp MINUS
-                         &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE  &kp C_MUTE  &kp C_PP  &kp RETURN  &kp BACKSPACE  &kp RALT
+&kp TAB           &kp Q  &kp W    &kp E         &kp R         &kp T                            &kp Y       &kp U          &kp I      &kp O    &kp P     &kp ESCAPE
+&kp LSHFT         &kp A  &lt 3 S  &lt 2 D       &lt 1 F       &kp G                            &kp H       &kp J          &kp K      &kp L    &kp SEMI  &kp RSHFT
+&kp LEFT_CONTROL  &kp Z  &kp X    &kp C         &kp V         &kp B                            &kp N       &kp M          &kp COMMA  &kp DOT  &kp APOS  &kp MINUS
+                                  &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE  &kp C_MUTE  &kp C_PP  &kp RETURN  &kp BACKSPACE  &kp RALT
             >;
 
             sensor-bindings =
@@ -32,21 +33,20 @@
         Symbols {
             display-name = "Symbols";
             bindings = <
-
-&kp TAB           &trans         &kp LS(GRAVE)  &kp RA(N1)    &kp LS(N6)     &kp LS(EQUAL)                    &kp RA(N2)    &kp LS(N5)     &kp LS(N2)    &kp FSLH      &kp LS(FSLH)   &kp ESCAPE
-&kp LSHFT         &kp LS(COMMA)  &kp LS(DOT)    &trans        &kp LS(MINUS)  &kp LS(N1)                       &kp LS(N8)    &kp LS(N9)     &kp RA(APOS)  &kp RA(NUHS)  &kp RA(GRAVE)  &kp RSHFT
-&kp LEFT_CONTROL  &trans         &trans         &trans        &kp LS(N4)     &kp LS(N5)                       &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)   &kp NUBS      &kp LS(NUBS)  &kp LS(N7)     &studio_unlock
-                                                &kp LEFT_GUI  &kp LEFT_ALT   &kp SPACE  &kp C_MUTE  &kp C_PP  &kp RETURN    &kp BACKSPACE  &kp RALT
+&kp TAB           &trans         &kp LS(GRAVE)  &kp RA(N1)    &kp LS(N6)     &kp LS(EQUAL)                        &kp RA(N2)          &kp LS(N5)           &kp LS(N2)    &kp FSLH      &kp LS(FSLH)   &kp ESCAPE
+&kp LSHFT         &kp LS(COMMA)  &kp LS(DOT)    &trans        &kp LS(MINUS)  &kp LS(N1)                           &kp LS(N8)          &kp LS(N9)           &kp RA(APOS)  &kp RA(NUHS)  &kp RA(GRAVE)  &kp RSHFT
+&kp LEFT_CONTROL  &trans         &trans         &trans        &kp LS(N4)     &kp LS(N5)                           &kp RA(LEFT_BRACE)  &kp RA(RIGHT_BRACE)  &kp NUBS      &kp LS(NUBS)  &kp LS(N7)     &studio_unlock
+                                                &kp LEFT_GUI  &kp LEFT_ALT   &kp SPACE      &kp C_MUTE  &kp C_PP  &kp RETURN          &kp BACKSPACE        &kp RALT
             >;
         };
 
         F_Arrows {
             display-name = "F_Arrows";
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                  &kp F7          &kp F8          &kp F9           &kp F10  &kp F11  &kp F12
-&trans          &trans  &trans  &trans  &trans  &trans                  &trans          &kp UP_ARROW    &trans           &trans   &trans   &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans                  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans   &trans
-                                &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
+&kp F1          &kp F2  &kp F3  &kp F4    &kp F5    &kp F6                    &kp F7          &kp F8          &kp F9           &kp F10  &kp F11  &kp F12
+&trans          &trans  &trans  &mkp MB1  &mkp MB2  &trans                    &trans          &kp UP_ARROW    &trans           &trans   &trans   &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans    &trans    &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &trans   &trans
+                                &trans    &kp LALT  &mkp MB3  &trans  &trans  &trans          &trans          &trans
             >;
         };
     };
